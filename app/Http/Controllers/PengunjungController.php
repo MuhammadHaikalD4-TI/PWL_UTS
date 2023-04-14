@@ -14,11 +14,8 @@ class PengunjungController extends Controller
      */
     public function index()
     {
-        if(request('q')){
-            $pengunjung = PengunjungModel::where('nama', 'LIKE',  '%'. request('q') . '%')->paginate(2)->withQueryString();
-        } else {
-            $pengunjung = PengunjungModel::latest()->paginate(2);
-        }
+            $pengunjung = PengunjungModel::all();
+        
         
         return view('pengunjung.pengunjung')->with('pengunjung', $pengunjung);
     }

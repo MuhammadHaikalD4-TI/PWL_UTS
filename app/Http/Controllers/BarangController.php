@@ -15,11 +15,8 @@ class BarangController extends Controller
      */
     public function index()
     {
-        if(request('q')){
-            $brg = Barang::where('nama_barang', 'like', '%'.request('q').'%')->paginate(2)->withQueryString();
-        } else {
+        
             $brg = Barang::latest()->paginate(2);
-        }
         
         return view('UTS.barang', compact('brg'));
     }
