@@ -15,7 +15,7 @@ class BarangController extends Controller
      */
     public function index()
     {
-        $brg = Barang::all();
+        $brg = Barang::latest()->paginate(2);
         return view('UTS.barang', compact('brg'));
     }
 

@@ -20,11 +20,10 @@ use App\Http\Controllers\BarangController;
 Auth::routes();
 
 Route::get('logout', [LoginController::class, 'logout']);
+
 Route::middleware(['auth'])->group(function () {
 
-    Route::get('/',  [HomeController::class, 'index'])->name('dashboard');
-
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
     Route::resource('/pengunjung', PengunjungController::class);
 

@@ -30,8 +30,9 @@
 
               <div class="card-tools">
                 <div class="input-group input-group-sm" style="width: 150px;">
-                  <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
+                  <form action="/pengunjung" method="get">
+                    <input type="search" name="q" class="form-control float-right" placeholder="Search">
+                  </form>
                   <div class="input-group-append">
                     <button type="submit" class="btn btn-default">
                       <i class="fas fa-search"></i>
@@ -90,6 +91,9 @@
                     @endif
                   </tbody>
                 </table>
+                <div class="mt-1 d-flex justify-content-end">
+                  {{ $pengunjung->onEachSide(1)->links() }}
+                </div>
             </div>
             <!-- /.card-body -->
           </div>
