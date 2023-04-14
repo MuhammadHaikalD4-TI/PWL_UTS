@@ -91,6 +91,9 @@
                     @endif
                   </tbody>
                 </table>
+                <div class="mt-1 d-flex justify-content-end">
+                  {{ $pengunjung->onEachSide(1)->links() }}
+                </div>
             </div>
             <!-- /.card-body -->
           </div>

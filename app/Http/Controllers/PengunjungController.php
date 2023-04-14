@@ -14,7 +14,7 @@ class PengunjungController extends Controller
      */
     public function index()
     {
-            $pengunjung = PengunjungModel::all();
+            $pengunjung = PengunjungModel::latest()->paginate(2);
         
         
         return view('pengunjung.pengunjung')->with('pengunjung', $pengunjung);
