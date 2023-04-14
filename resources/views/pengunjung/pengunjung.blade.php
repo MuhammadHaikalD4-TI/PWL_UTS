@@ -77,10 +77,10 @@
                             <!-- Bikin tombol edit dan delete -->
                             <a href="{{ url('/pengunjung/'. $p->id.'/edit') }}" class="btn btn-sm btn-warning">edit</a>
             
-                            <form method="POST" action="{{ url('/pengunjung/'.$p->id) }}" >
+                            <form method="POST" action="{{ url('/pengunjung/'.$p->id) }}" class="form">
                               @csrf
                               @method('DELETE')
-                              <button type="submit" class="btn btn-sm btn-danger">hapus</button>
+                              <button type="submit" class="btn btn-sm btn-danger" onclick="konfirm()">hapus</button>
                             </form>
                           </td>
                         </tr>
@@ -104,7 +104,15 @@
 @endsection
 
 @push('custom_js')
+@push('custom_js')
 <script>
-    alert('Welcome')
-</script>
+  function konfirm(){
+    if(confirm('Apakah Anda Yakin Menghapus?')){
+      document.querySelector(".form").sumbit();
+    } else {
+      event.preventDefault();
+    }
+}
+</script>  
+@endpush
 @endpush

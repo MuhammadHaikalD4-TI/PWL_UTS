@@ -33,7 +33,7 @@
                with font-awesome or any other icon font library -->
         <li class="nav-item">
           <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <i class="nav-icon fas fa-album-collection"></i>
             <p>
               Dashboard
               <i class="right fas fa-angle-left"></i>
@@ -52,6 +52,14 @@
             <i class="nav-icon far fa-thing"></i>
             <p>
               <p>Daftar Pengunjung</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="/barang" class="nav-link">
+            <i class="nav-icon far fa-thing"></i>
+            <p>
+              <p>Barang</p>
           </a>
         </li>
 

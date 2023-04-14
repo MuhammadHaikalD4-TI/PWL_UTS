@@ -44,6 +44,7 @@
 <script src="{{asset('assets/dist/js/adminlte.min.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset('assets/dist/js/demo.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @stack ('custom_js')
 </body>
 </html>

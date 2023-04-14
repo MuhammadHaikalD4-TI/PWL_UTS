@@ -108,6 +108,7 @@ class PengunjungController extends Controller
      */
     public function destroy($id)
     {
-        //
+        PengunjungModel::where('id', '=', $id)->delete();
+        return redirect('pengunjung')->with('success', 'Pengunjung Berhasil Dihapus');
     }
 }
