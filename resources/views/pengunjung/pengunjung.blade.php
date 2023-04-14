@@ -31,7 +31,7 @@
               <div class="card-tools">
                 <div class="input-group input-group-sm" style="width: 150px;">
                   <form action="/pengunjung" method="get">
-                    <input type="search" name="q" class="form-control float-right" placeholder="Search">
+                    <input type="search" name="q" class="form-control float-right" placeholder="Search" value="{{request('q')}}">
                   </form>
                   <div class="input-group-append">
                     <button type="submit" class="btn btn-default">

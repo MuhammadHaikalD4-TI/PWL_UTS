@@ -1,5 +1,17 @@
 @extends('layout.template')
 @section('content')
+<div class="input-group input-group-sm" style="width: 150px; margin-left:275px; margin-top:10px;">
+  <form action="/barang" method="get">
+    <input type="search" name="q" class="form-control float-right" placeholder="Search" value="{{request('q')}}">
+  </form>
+  <div class="input-group-append">
+    <button type="submit" class="btn btn-default">
+      <i class="fas fa-search"></i>
+    </button>
+  </div>
+</div>
+</div>
+</div>
 <div class="card-body" style="margin-left: 250px;">
 
     <a href="{{url('/barang/create')}}" class="btn btn-sm btn-success my-2">Tambah Data</a>
